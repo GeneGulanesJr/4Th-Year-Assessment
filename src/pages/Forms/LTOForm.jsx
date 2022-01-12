@@ -215,8 +215,194 @@ export default function LTOForm({works}) {
                                                             </FormControl>
                                                         )}
                                                     </Field>
+                                                    <Field name='Birthplace' >
+                                                        {({ field, form }) => (
+                                                            <FormControl isInvalid={form.errors.Birthplace && form.touched.Birthplace}>
+                                                                <FormLabel htmlFor='Birthplace'>Birth Place</FormLabel>
+                                                                <Input {...field} id='Birthplace' placeholder='Birthplace' />
+                                                                <FormErrorMessage>{form.errors.Birthplace}</FormErrorMessage>
+                                                            </FormControl>
+                                                        )}
+                                                    </Field>
+                                                    <Field name='FathersName' >
+                                                        {({ field, form }) => (
+                                                            <FormControl isInvalid={form.errors.FathersName && form.touched.FathersName}>
+                                                                <FormLabel htmlFor='FathersName'>Fathers Name</FormLabel>
+                                                                <Input {...field} id='FathersName' placeholder='FathersName' />
+                                                                <FormErrorMessage>{form.errors.FathersName}</FormErrorMessage>
+                                                            </FormControl>
+                                                        )}
+                                                    </Field>
+                                                    <Field name='MothersName' >
+                                                        {({ field, form }) => (
+                                                            <FormControl isInvalid={form.errors.MothersName && form.touched.MothersName}>
+                                                                <FormLabel htmlFor='MothersName'>Mothers Name</FormLabel>
+                                                                <Input {...field} id='MothersName' placeholder='MothersName' />
+                                                                <FormErrorMessage>{form.errors.MothersName}</FormErrorMessage>
+                                                            </FormControl>
+                                                        )}
+                                                    </Field>
+                                                    <Field name='SpouseName' >
+                                                        {({ field, form }) => (
+                                                            <FormControl isInvalid={form.errors.SpouseName && form.touched.SpouseName}>
+                                                                <FormLabel htmlFor='SpouseName'>Spouse Name</FormLabel>
+                                                                <Input {...field} id='SpouseName' placeholder='SpouseName' />
+                                                                <FormErrorMessage>{form.errors.SpouseName}</FormErrorMessage>
+                                                            </FormControl>
+                                                        )}
+                                                    </Field>
+                                                    <Field name='EmployersBusinessName' >
+                                                        {({ field, form }) => (
+                                                            <FormControl isInvalid={form.errors.EmployersBusinessName && form.touched.EmployersBusinessName}>
+                                                                <FormLabel htmlFor='EmployersBusinessName'>Pressent Address</FormLabel>
+                                                                <Input {...field} id='EmployersBusinessName' placeholder='EmployersBusinessName' />
+                                                                <FormErrorMessage>{form.errors.EmployersBusinessName}</FormErrorMessage>
+                                                            </FormControl>
+                                                        )}
+                                                    </Field>
+
+                                                    <Field name='TelNo' >
+                                                        {({ field, form }) => (
+                                                            <FormControl isInvalid={form.errors.TelNo && form.touched.TelNo}>
+                                                                <FormLabel htmlFor='TelNo'>Tel No.</FormLabel>
+                                                                <Input {...field} id='TelNo' placeholder='TelNo' type='number'/>
+                                                                <FormErrorMessage>{form.errors.TelNo}</FormErrorMessage>
+                                                            </FormControl>
+                                                        )}
+                                                    </Field>
+                                                    <Field name='EmployersBusinessAddress' >
+                                                        {({ field, form }) => (
+                                                            <FormControl isInvalid={form.errors.EmployersBusinessAddress && form.touched.EmployersBusinessAddress}>
+                                                                <FormLabel htmlFor='EmployersBusinessAddress'>Employers Business Address</FormLabel>
+                                                                <Input {...field} id='EmployersBusinessAddress' placeholder='EmployersBusinessAddress' />
+                                                                <FormErrorMessage>{form.errors.EmployersBusinessAddress}</FormErrorMessage>
+                                                            </FormControl>
+                                                        )}
+                                                    </Field>
+                                                    <Field name='EmergencyContactPerson' >
+                                                        {({ field, form }) => (
+                                                            <FormControl isInvalid={form.errors.EmergencyContactPerson && form.touched.EmergencyContactPerson}>
+                                                                <FormLabel htmlFor='EmergencyContactPerson'>Emergency Contact Person</FormLabel>
+                                                                <Input {...field} id='EmergencyContactPerson' placeholder='EmergencyContactPerson' />
+                                                                <FormErrorMessage>{form.errors.EmergencyContactPerson}</FormErrorMessage>
+                                                            </FormControl>
+                                                        )}
+                                                    </Field>
 
 
+                                                    <Field name='EmergencyContactAddress' >
+                                                        {({ field, form }) => (
+                                                            <FormControl isInvalid={form.errors.EmergencyContactAddress && form.touched.EmergencyContactAddress}>
+                                                                <FormLabel htmlFor='EmergencyContactAddress'>Emergency Contact Address</FormLabel>
+                                                                <Input {...field} id='EmergencyContactAddress' placeholder='EmergencyContactAddress' />
+                                                                <FormErrorMessage>{form.errors.EmergencyContactAddress}</FormErrorMessage>
+                                                            </FormControl>
+                                                        )}
+                                                    </Field>
+
+                                                    <Field name='EmergencyContactNo' >
+                                                        {({ field, form }) => (
+                                                            <FormControl isInvalid={form.errors.EmergencyContactNo && form.touched.EmergencyContactNo}>
+                                                                <FormLabel htmlFor='EmergencyContactNo'>Emergency Contact No</FormLabel>
+                                                                <Input {...field} id='EmergencyContactNo' placeholder='EmergencyContactNo' />
+                                                                <FormErrorMessage>{form.errors.EmergencyContactNo}</FormErrorMessage>
+                                                            </FormControl>
+                                                        )}
+                                                    </Field>
+                                                    <Field name='AgencyCode' >
+                                                        {({ field, form }) => (
+                                                            <FormControl isInvalid={form.errors.AgencyCode && form.touched.AgencyCode}>
+                                                                <FormLabel htmlFor='AgencyCode'>Agency Code</FormLabel>
+                                                                <Input {...field} id='AgencyCode' placeholder='AgencyCode' />
+                                                                <FormErrorMessage>{form.errors.AgencyCode}</FormErrorMessage>
+                                                            </FormControl>
+                                                        )}
+                                                    </Field>
+
+                                                    <Field name='IssueDate' >
+                                                        {({ field, form }) => (
+                                                            <FormControl isInvalid={form.errors.IssueDate && form.touched.IssueDate}>
+                                                                <FormLabel htmlFor='IssueDate'>Issue Date</FormLabel>
+                                                                <Input {...field} id='IssueDate' placeholder='IssueDate' />
+                                                                <FormErrorMessage>{form.errors.IssueDate}</FormErrorMessage>
+                                                            </FormControl>
+                                                        )}
+                                                    </Field>
+                                                    <Field name='ExpiryDate' >
+                                                        {({ field, form }) => (
+                                                            <FormControl isInvalid={form.errors.ExpiryDate && form.touched.ExpiryDate}>
+                                                                <FormLabel htmlFor='ExpiryDate'>Expiry Date</FormLabel>
+                                                                <Input {...field} id='ExpiryDate' placeholder='ExpiryDate' />
+                                                                <FormErrorMessage>{form.errors.ExpiryDate}</FormErrorMessage>
+                                                            </FormControl>
+                                                        )}
+                                                    </Field>
+                                                    <Field name='LicenceClassification' >
+                                                        {({ field, form }) => (
+                                                            <FormControl isInvalid={form.errors.LicenceClassification && form.touched.LicenceClassification}>
+                                                                <FormLabel htmlFor='LicenceClassification'>Licence Classification</FormLabel>
+                                                                <Input {...field} id='LicenceClassification' placeholder='LicenceClassification' />
+                                                                <FormErrorMessage>{form.errors.LicenceClassification}</FormErrorMessage>
+                                                            </FormControl>
+                                                        )}
+                                                    </Field>
+
+                                                    <Field name='DrivingSkill' >
+                                                        {({ field, form }) => (
+                                                            <FormControl isInvalid={form.errors.DrivingSkill && form.touched.DrivingSkill}>
+                                                                <FormLabel htmlFor='DrivingSkill'>Driving Skill</FormLabel>
+                                                                <Input {...field} id='DrivingSkill' placeholder='DrivingSkill' />
+                                                                <FormErrorMessage>{form.errors.DrivingSkill}</FormErrorMessage>
+                                                            </FormControl>
+                                                        )}
+                                                    </Field>
+
+
+                                                    <Field name='HighestEducationAttainment' >
+                                                        {({ field, form }) => (
+                                                            <FormControl isInvalid={form.errors.HighestEducationAttainment && form.touched.HighestEducationAttainment}>
+                                                                <FormLabel htmlFor='HighestEducationAttainment'>Highest Educational Attainment</FormLabel>
+                                                                <Input {...field} id='HighestEducationAttainment' placeholder='HighestEducationAttainment' />
+                                                                <FormErrorMessage>{form.errors.HighestEducationAttainment}</FormErrorMessage>
+                                                            </FormControl>
+                                                        )}
+                                                    </Field>
+                                                    <Field name='BloodType' >
+                                                        {({ field, form }) => (
+                                                            <FormControl isInvalid={form.errors.BloodType && form.touched.BloodType}>
+                                                                <FormLabel htmlFor='BloodType'>Blood Type</FormLabel>
+                                                                <Input {...field} id='BloodType' placeholder='BloodType' />
+                                                                <FormErrorMessage>{form.errors.BloodType}</FormErrorMessage>
+                                                            </FormControl>
+                                                        )}
+                                                    </Field>
+                                                    <Field name='OrganDonor' >
+                                                        {({ field, form }) => (
+                                                            <FormControl isInvalid={form.errors.OrganDonor && form.touched.OrganDonor}>
+                                                                <FormLabel htmlFor='OrganDonor'>Organ Donor</FormLabel>
+                                                                <Input {...field} id='OrganDonor' placeholder='OrganDonor' />
+                                                                <FormErrorMessage>{form.errors.OrganDonor}</FormErrorMessage>
+                                                            </FormControl>
+                                                        )}
+                                                    </Field>
+                                                    <Field name='EyesColor' >
+                                                        {({ field, form }) => (
+                                                            <FormControl isInvalid={form.errors.EyesColor && form.touched.EyesColor}>
+                                                                <FormLabel htmlFor='EyesColor'>Eyes Color</FormLabel>
+                                                                <Input {...field} id='EyesColor' placeholder='EyesColor' />
+                                                                <FormErrorMessage>{form.errors.EyesColor}</FormErrorMessage>
+                                                            </FormControl>
+                                                        )}
+                                                    </Field>
+                                                    <Field name='TypeofApplication' >
+                                                        {({ field, form }) => (
+                                                            <FormControl isInvalid={form.errors.TypeofApplication && form.touched.TypeofApplication}>
+                                                                <FormLabel htmlFor='TypeofApplication'>Type of Application</FormLabel>
+                                                                <Input {...field} id='TypeofApplication' placeholder='TypeofApplication' />
+                                                                <FormErrorMessage>{form.errors.TypeofApplication}</FormErrorMessage>
+                                                            </FormControl>
+                                                        )}
+                                                    </Field>
                                                 </Form>
                                             )}
                                         </Formik>
