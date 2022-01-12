@@ -59,7 +59,9 @@ export default function AuthContextProvider({ children }) {
            firstName:firstName,
             lastName:lastName,
             username:username,
-            contactnumber:contactnumber
+            contactnumber:contactnumber,
+            status: 'Disabled',
+            Role:'User'
           });
         })
   }

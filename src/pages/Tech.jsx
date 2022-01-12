@@ -1,49 +1,93 @@
 import {
-    Badge,
-    chakra,
-    Code,
+    Box,
+    Container,
     Heading,
-    List,
-    ListItem,
-    OrderedList,
-} from '@chakra-ui/react'
+    SimpleGrid,
+    Icon,
+    Text,
+    Stack,
+    HStack,
+    VStack, Badge, List,  Table,
+    Thead,
+    Tbody,
+    Tfoot,
+    Tr,
+    Th,
+    Td,
+    TableCaption,
+} from '@chakra-ui/react';
+import { CheckIcon } from '@chakra-ui/icons';
 import React from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link} from 'react-router-dom'
 import { Layout } from '../components/Layout'
-import { useAuth } from '../contexts/AuthContext'
+
 
 export default function Tech() {
     return (
         <Layout>
-            <Heading>Home page</Heading>
-            {/* <Text my={6}>{currentUser?.email}</Text> */}
 
-            <Heading>
-                <Badge
-                    fontWeight='black'
-                    fontSize='4xl'
-                    mx={2}
-                    px={2}
-                    colorScheme='green'
-                >
-                    Love - Licensing Of Vehicle for Everyone,
-                </Badge>
-            </Heading>
+            <Box p={4}>
+                <Heading>TechStack Used</Heading>
+                <Table variant='striped' colorScheme='teal'>
 
-            <Heading size='md' mt={8}>
-                Some other links (only for reference):
-            </Heading>
-            <List>
-                <ListItem>
-                    <Link to='/reset-password'>reset page</Link>
-                </ListItem>
-                <ListItem>
-                    <Link to='/forgot-password'>forgot page</Link>
-                </ListItem>
-                <ListItem>
-                    <Link to='/test'>test page</Link>
-                </ListItem>
-            </List>
+                    <Thead>
+                        <Tr>
+                            <Th>React</Th>
+                            <Th>Description</Th>
+
+                        </Tr>
+                    </Thead>
+                    <Tbody>
+
+                        <Tr>
+                            <Td>Firebase</Td>
+                            <Td> Use for user authentication and backend storage</Td>
+
+                        </Tr>
+
+                        <Tr>
+                            <Td>Vercel</Td>
+                            <Td>Used for web hosting.</Td>
+
+                        </Tr>
+
+                        <Tr>
+                            <Td>Chakra-Ui</Td>
+                            <Td>UI Theme for React.</Td>
+
+                        </Tr>
+
+                        <Tr>
+                            <Td>PHPStorm</Td>
+                            <Td>IDE Used</Td>
+
+                        </Tr>
+                        <Tr>
+                            <Td>Canva</Td>
+                            <Td>Use to create image/video assets.</Td>
+
+                        </Tr>
+                        <Tr>
+                            <Td>Formik</Td>
+                            <Td>Used to create forms easily.</Td>
+
+                        </Tr>
+                        <Tr>
+                            <Td>React-data-table-component</Td>
+                            <Td>Used to display tables with search/filter functions.</Td>
+
+                        </Tr>
+
+
+                    </Tbody>
+
+                </Table>
+
+            </Box>
+
+
+
+
         </Layout>
     )
 }
