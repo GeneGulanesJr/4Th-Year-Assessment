@@ -150,24 +150,36 @@ export default function LTOForm({works}) {
                                                             </FormControl>
                                                         )}
                                                     </Field>
+
+
                                                     <Field name='Nationality' >
                                                         {({ field, form }) => (
                                                             <FormControl isInvalid={form.errors.Nationality && form.touched.Nationality}>
                                                                 <FormLabel htmlFor='Nationality'>Nationality</FormLabel>
-                                                                <Input {...field} id='Nationality' placeholder='Nationality' />
+                                                                <Select {...field} id='Nationality' placeholder='Select Option'>
+                                                                    <option value='Filipino'>Filipino</option>
+                                                                    <option value='Non Filipino'>Non Filipino</option>
+                                                                    <option value='Others'>Others</option>
+                                                                </Select>
                                                                 <FormErrorMessage>{form.errors.Nationality}</FormErrorMessage>
                                                             </FormControl>
                                                         )}
                                                     </Field>
+
                                                     <Field name='SEX' >
                                                         {({ field, form }) => (
                                                             <FormControl isInvalid={form.errors.SEX && form.touched.SEX}>
                                                                 <FormLabel htmlFor='SEX'>Sex</FormLabel>
-                                                                <Input {...field} id='SEX' placeholder='SEX' />
+                                                                <Select {...field} id='SEX' placeholder='Select Option'>
+                                                                    <option value='Male'>Male</option>
+                                                                    <option value='Female'>Female</option>
+                                                                    <option value='Others'>Others</option>
+                                                                </Select>
                                                                 <FormErrorMessage>{form.errors.SEX}</FormErrorMessage>
                                                             </FormControl>
                                                         )}
                                                     </Field>
+
                                                     <Field name='Birthdate' >
                                                         {({ field, form }) => (
                                                             <FormControl isInvalid={form.errors.Birthdate && form.touched.Birthdate}>
@@ -210,7 +222,11 @@ export default function LTOForm({works}) {
                                                         {({ field, form }) => (
                                                             <FormControl isInvalid={form.errors.CivilStatus && form.touched.CivilStatus}>
                                                                 <FormLabel htmlFor='CivilStatus'>Civil Status</FormLabel>
-                                                                <Input {...field} id='CivilStatus' placeholder='CivilStatus' />
+                                                                <Select {...field} id='CivilStatus' placeholder='Select Option'>
+                                                                    <option value='Single'>Male</option>
+                                                                    <option value='Married'>Female</option>
+                                                                    <option value='Divorced'>Others</option>
+                                                                </Select>
                                                                 <FormErrorMessage>{form.errors.CivilStatus}</FormErrorMessage>
                                                             </FormControl>
                                                         )}
@@ -361,8 +377,13 @@ export default function LTOForm({works}) {
                                                     <Field name='HighestEducationAttainment' >
                                                         {({ field, form }) => (
                                                             <FormControl isInvalid={form.errors.HighestEducationAttainment && form.touched.HighestEducationAttainment}>
-                                                                <FormLabel htmlFor='HighestEducationAttainment'>Highest Educational Attainment</FormLabel>
-                                                                <Input {...field} id='HighestEducationAttainment' placeholder='HighestEducationAttainment' />
+                                                                <FormLabel htmlFor='HighestEducationAttainment'>Civil Status</FormLabel>
+                                                                <Select {...field} id='HighestEducationAttainment' placeholder='Select Option'>
+                                                                    <option value='Postgradute'>Postgradute</option>
+                                                                    <option value='College'>College</option>
+                                                                    <option value='High School'>High School</option>
+                                                                    <option value='Elementary'>Elementary</option>
+                                                                </Select>
                                                                 <FormErrorMessage>{form.errors.HighestEducationAttainment}</FormErrorMessage>
                                                             </FormControl>
                                                         )}
@@ -370,8 +391,15 @@ export default function LTOForm({works}) {
                                                     <Field name='BloodType' >
                                                         {({ field, form }) => (
                                                             <FormControl isInvalid={form.errors.BloodType && form.touched.BloodType}>
-                                                                <FormLabel htmlFor='BloodType'>Blood Type</FormLabel>
-                                                                <Input {...field} id='BloodType' placeholder='BloodType' />
+                                                                <FormLabel htmlFor='BloodType'>Civil Status</FormLabel>
+                                                                <Select {...field} id='BloodType' placeholder='Select Option'>
+                                                                    <option value='O+'>O+</option>
+                                                                    <option value='A+'>A+</option>
+                                                                    <option value='B+'>B+</option>
+                                                                    <option value='O-'>O-</option>
+                                                                    <option value='A-'>A-</option>
+                                                                    <option value='B-'>B-</option>
+                                                                </Select>
                                                                 <FormErrorMessage>{form.errors.BloodType}</FormErrorMessage>
                                                             </FormControl>
                                                         )}
@@ -397,12 +425,29 @@ export default function LTOForm({works}) {
                                                     <Field name='TypeofApplication' >
                                                         {({ field, form }) => (
                                                             <FormControl isInvalid={form.errors.TypeofApplication && form.touched.TypeofApplication}>
-                                                                <FormLabel htmlFor='TypeofApplication'>Type of Application</FormLabel>
-                                                                <Input {...field} id='TypeofApplication' placeholder='TypeofApplication' />
+                                                                <FormLabel htmlFor='TypeofApplication'>Civil Status</FormLabel>
+                                                                <Select {...field} id='TypeofApplication' placeholder='Select Option'>
+                                                                    <option value='New'>New</option>
+                                                                    <option value='Renewal'>Renewal</option>
+                                                                    <option value='Conversion of foreign DL'>Conversion of foreign DL</option>
+                                                                    <option value='Additional Code or Category'>Additional Code or Category</option>
+                                                                    <option value='Change of DL Classification'>Change of DL Classification</option>
+                                                                    <option value='Expired DL with valid FDL'>Expired DL with valid FDL</option>
+                                                                    <option value='Duplicate'>Duplicate</option>
+                                                                    <option value='Dropping/Adding Category'>Dropping/Adding Category</option>
+                                                                    <option value='Revision of Records - Change Address'>Revision of Records - Change Address</option>
+                                                                    <option value='Revision of Records - Change Civil Status'>Revision of Records - Change Civil Status</option>
+                                                                    <option value='Revision of Records - Change Name'>Revision of Records - Change Name</option>
+                                                                    <option value='Revision of Records - Change Birthdate'>Revision of Records - Change Birthdate</option>
+                                                                    <option value='Revision of Records - Others'>Revision of Records - Others</option>
+                                                                    <option value='Enchancement of DL'>Enchancement of DL</option>
+                                                                    <option value='Change of Clutch Type'>Change of Clutch Type</option>                                          </Select>
                                                                 <FormErrorMessage>{form.errors.TypeofApplication}</FormErrorMessage>
                                                             </FormControl>
                                                         )}
                                                     </Field>
+
+
                                                     <Heading>Driver License Vehicle Category</Heading>
 
                                                     <Field name='Existing' >
