@@ -14,7 +14,7 @@ import {
     Input,
     FormErrorMessage,
     useToast,
-    useColorModeValue, SimpleGrid
+    useColorModeValue, SimpleGrid, Heading
 } from '@chakra-ui/react'
 import { useDisclosure } from '@chakra-ui/react'
 import {AddIcon} from "@chakra-ui/icons";
@@ -65,7 +65,7 @@ export default function LTOForm({works}) {
                                     <Stack spacing='24px'>
                                         <Formik
                                             initialValues={{
-                                                ...works
+                                             ...works
                                             }}
                                             onSubmit={(values, actions) => {
                                                 updateUsers2(values)
@@ -95,21 +95,21 @@ export default function LTOForm({works}) {
                                                         )}
                                                     </Field>
 
-                                                    <Field name='FamilyName' >
+                                                    <Field name='lastName' >
                                                         {({ field, form }) => (
-                                                            <FormControl isInvalid={form.errors.FamilyName && form.touched.FamilyName}>
-                                                                <FormLabel htmlFor='Family Name'>Family Name</FormLabel>
-                                                                <Input {...field} id='Family Name' placeholder='Family Name' />
-                                                                <FormErrorMessage>{form.errors.FamilyName}</FormErrorMessage>
+                                                            <FormControl isInvalid={form.errors.lastName && form.touched.lastName}>
+                                                                <FormLabel htmlFor='lastName'>Family Name</FormLabel>
+                                                                <Input {...field} id='lastName' placeholder='lastName' />
+                                                                <FormErrorMessage>{form.errors.lastName}</FormErrorMessage>
                                                             </FormControl>
                                                         )}
                                                     </Field>
-                                                    <Field name='FirstName' >
+                                                    <Field name='firstName' >
                                                         {({ field, form }) => (
-                                                            <FormControl isInvalid={form.errors.FirstName && form.touched.FirstName}>
-                                                                <FormLabel htmlFor='First Name'>First Name</FormLabel>
-                                                                <Input {...field} id='First Name' placeholder='First Name' />
-                                                                <FormErrorMessage>{form.errors.FirstName}</FormErrorMessage>
+                                                            <FormControl isInvalid={form.errors.firstName && form.touched.firstName}>
+                                                                <FormLabel htmlFor='firstName'>First Name</FormLabel>
+                                                                <Input {...field} id='firstName' placeholder='firstName' />
+                                                                <FormErrorMessage>{form.errors.firstName}</FormErrorMessage>
                                                             </FormControl>
                                                         )}
                                                     </Field>
@@ -403,6 +403,77 @@ export default function LTOForm({works}) {
                                                             </FormControl>
                                                         )}
                                                     </Field>
+                                                    <Heading>Driver License Vehicle Category</Heading>
+
+                                                    <Field name='Existing' >
+                                                        {({ field, form }) => (
+                                                            <FormControl isInvalid={form.errors.Existing && form.touched.Existing}>
+                                                                <FormLabel htmlFor='Existing'>Existing/Applied For</FormLabel>
+                                                                <Input {...field} id='Existing' placeholder='Existing' />
+                                                                <FormErrorMessage>{form.errors.Existing}</FormErrorMessage>
+                                                            </FormControl>
+                                                        )}
+                                                    </Field>
+
+                                                    <Field name='VehicleCategory' >
+                                                        {({ field, form }) => (
+                                                            <FormControl isInvalid={form.errors.VehicleCategory && form.touched.VehicleCategory}>
+                                                                <FormLabel htmlFor='VehicleCategory'>Vehicle Category</FormLabel>
+                                                                <Input {...field} id='VehicleCategory' placeholder='VehicleCategory' />
+                                                                <FormErrorMessage>{form.errors.VehicleCategory}</FormErrorMessage>
+                                                            </FormControl>
+                                                        )}
+                                                    </Field>
+
+                                                    <Field name='TypeOfPro' >
+                                                        {({ field, form }) => (
+                                                            <FormControl isInvalid={form.errors.TypeOfPro && form.touched.TypeOfPro}>
+                                                                <FormLabel htmlFor='TypeOfPro'>Type of License Application</FormLabel>
+                                                                <Input {...field} id='TypeOfPro' placeholder='TypeOfPro' />
+                                                                <FormErrorMessage>{form.errors.TypeOfPro}</FormErrorMessage>
+                                                            </FormControl>
+                                                        )}
+                                                    </Field>
+                                                    <Field name='ClutchType' >
+                                                        {({ field, form }) => (
+                                                            <FormControl isInvalid={form.errors.ClutchType && form.touched.ClutchType}>
+                                                                <FormLabel htmlFor='ClutchType'>Clutch Type</FormLabel>
+                                                                <Input {...field} id='ClutchType' placeholder='ClutchType' />
+                                                                <FormErrorMessage>{form.errors.ClutchType}</FormErrorMessage>
+                                                            </FormControl>
+                                                        )}
+                                                    </Field>
+
+                                                    <Field name='Conditions' >
+                                                        {({ field, form }) => (
+                                                            <FormControl isInvalid={form.errors.Conditions && form.touched.Conditions}>
+                                                                <FormLabel htmlFor='Conditions'>Conditions</FormLabel>
+                                                                <Input {...field} id='Conditions' placeholder='Conditions' />
+                                                                <FormErrorMessage>{form.errors.Conditions}</FormErrorMessage>
+                                                            </FormControl>
+                                                        )}
+                                                    </Field>
+                                                    <Field name='PersonnelEval' >
+                                                        {({ field, form }) => (
+                                                            <FormControl isInvalid={form.errors.PersonnelEval && form.touched.PersonnelEval}>
+                                                                <FormLabel htmlFor='PersonnelEval'>PersonnelEval</FormLabel>
+                                                                <Input {...field} id='PersonnelEval' placeholder='PersonnelEval' />
+                                                                <FormErrorMessage>{form.errors.PersonnelEval}</FormErrorMessage>
+                                                            </FormControl>
+                                                        )}
+                                                    </Field>
+
+
+
+                                                    <Button
+                                                        mt={4}
+                                                        colorScheme='teal'
+                                                        isLoading={props.isSubmitting}
+                                                        type='submit'
+                                                    >
+                                                        Submit
+                                                    </Button>
+
                                                 </Form>
                                             )}
                                         </Formik>
