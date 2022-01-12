@@ -29,11 +29,15 @@ export function Navbar() {
         mx='auto'
         spacing={4}
       >
-        <Navlink to='/' name='Firbase Authentication' size='lg' />
         <Spacer />
         {!currentUser && <Navlink to='/login' name='Login' />}
         {!currentUser && <Navlink to='/register' name='Register' />}
-        {currentUser && <Navlink to='/profile' name='Profile' />}
+        {currentUser && <Navlink to='/' name='Landing page' />}
+        {currentUser && <Navlink to='/services' name='Services Offered' />}
+        {currentUser && <Navlink to='/contact' name='Contact Information' />}
+        {currentUser && <Navlink to='/tech' name='Technology Stack' />}
+        {currentUser && <Navlink to='/applicants' name='List of Applicants' />}
+
         {currentUser && (
           <Navlink
             to='/logout'

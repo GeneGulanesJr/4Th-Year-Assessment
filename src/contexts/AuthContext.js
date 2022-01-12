@@ -1,15 +1,17 @@
-import React, { createContext, useContext, useEffect, useState } from 'react'
-import { auth } from '../utils/init-firebase'
+import React, {createContext, useContext, useEffect, useState} from 'react'
+import {auth, db} from '../utils/init-firebase'
 import {
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  sendPasswordResetEmail,
-  onAuthStateChanged,
-  signInWithPopup,
-  GoogleAuthProvider,
-  signOut,
   confirmPasswordReset,
+  createUserWithEmailAndPassword,
+  GoogleAuthProvider,
+  onAuthStateChanged,
+  sendPasswordResetEmail,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  signOut,
 } from 'firebase/auth'
+import {doc, setDoc} from "firebase/firestore";
+
 
 const AuthContext = createContext({
   currentUser: null,
@@ -19,6 +21,9 @@ const AuthContext = createContext({
   logout: () => Promise,
   forgotPassword: () => Promise,
   resetPassword: () => Promise,
+  manualLogin: () => Promise
+
+
 })
 
 export const useAuth = () => useContext(AuthContext)
@@ -43,9 +48,24 @@ export default function AuthContextProvider({ children }) {
     return signInWithEmailAndPassword(auth, email, password)
   }
 
-  function register(email, password) {
-    return createUserWithEmailAndPassword(auth, email, password)
+
+  function register(email, password,firstName,lastName,username,contactnumber) {
+    return createUserWithEmailAndPassword(auth, email, password,firstName,lastName,username,contactnumber)
+        .then(async cred => {
+          const usersCollectionRef = doc(db, 'users', cred.user.uid);
+          await setDoc(usersCollectionRef, {
+            email: email,
+            id: cred.user.uid,
+           firstName:firstName,
+            lastName:lastName,
+            username:username,
+            contactnumber:contactnumber
+          });
+        })
   }
+
+
+
 
   function forgotPassword(email) {
     return sendPasswordResetEmail(auth, email, {
@@ -66,6 +86,7 @@ export default function AuthContextProvider({ children }) {
     return signInWithPopup(auth, provider)
   }
 
+
   const value = {
     currentUser,
     signInWithGoogle,
@@ -74,6 +95,8 @@ export default function AuthContextProvider({ children }) {
     logout,
     forgotPassword,
     resetPassword,
+
+
   }
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
 }
